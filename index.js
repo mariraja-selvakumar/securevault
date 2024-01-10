@@ -11,6 +11,9 @@ app.use(express.urlencoded({ extended: true }));
 
 require("./initDB");
 
+const AuthRoute = require("./routes/auth/auth.route");
+app.use("/auth", AuthRoute);
+
 const UserRoute = require("./routes/admin/user.route");
 app.use("/user", UserRoute);
 
