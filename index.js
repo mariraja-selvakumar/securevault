@@ -15,8 +15,8 @@ const adminAuthController = require("./controllers/auth/adminAuth.controller");
 app.use("/admin/auth", adminAuthController.auth);
 
 const AdminRoutes = require("./routes/admin/admin.route");
-const adminAuth = require("./middlewares/admin.auth");
-app.use("/admin", adminAuth, AdminRoutes);
+const adminAuthAndAuthorization = require("./middlewares/admin.auth");
+app.use("/admin", adminAuthAndAuthorization.authentication, AdminRoutes);
 
 app.use((req, res, next) => {
   next(createError(404, "Not found"));
