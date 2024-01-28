@@ -1,8 +1,5 @@
-const serverless = require("serverless-http");
 const express = require("express");
 const createError = require("http-errors");
-
-const router = express.Router();
 
 require("dotenv").config();
 require("./initDB")();
@@ -47,6 +44,3 @@ const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
   console.log("Server started on port " + PORT + "...");
 });
-
-app.use("./netlify/functions/api", router);
-module.exports.handler = serverless(app);
