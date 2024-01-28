@@ -1,7 +1,7 @@
 const express = require("express");
 const router = express.Router();
 
-const UserController = require("../../controllers/admin/user.controller");
+const UserController = require("../../controllers/admin/admin.controller");
 
 router.post("/add", UserController.addUser);
 router.get("/users", UserController.getAllUsers);
