@@ -65,6 +65,10 @@ const UserSchema = new Schema({
       required: true,
       unique: true,
     },
+    balance: {
+      type: Number,
+      required: true,
+    },
   },
 });
 

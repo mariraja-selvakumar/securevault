@@ -4,8 +4,8 @@ module.exports = () => {
   mongoose
     .connect(process.env.MONGODB_URI, {
       dbName: process.env.DB_NAME,
-      // user: process.env.DB_USERNAME,
-      // pass: process.env.DB_PASSWORD,
+      user: process.env.DB_USERNAME,
+      pass: process.env.DB_PASSWORD,
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useFindAndModify: false,
